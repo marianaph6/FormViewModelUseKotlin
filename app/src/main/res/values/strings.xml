@@ -7,4 +7,5 @@
     <string name="dni">Cédula</string>
     <string name="age">Edad</string>
     <string name="submit">Enviar</string>
+    <string name="resume">RESUMEN</string>
 </resources>
