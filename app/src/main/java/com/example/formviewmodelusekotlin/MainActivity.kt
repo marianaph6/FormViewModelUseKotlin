@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
                         "Apellidos: "+edtLastName.text +"\n"+
                         "Telefono: "+ edtPhone.text +"\n"+
                         "Cedula: "+ edtDNI.text +"\n"+
-                         "Edad: "+edtAge.text  
+                         "Edad: "+edtAge.text
             }
 
         }

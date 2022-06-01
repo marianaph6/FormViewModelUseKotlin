@@ -152,8 +152,7 @@
                 android:id="@+id/txt_Resume"
                 android:gravity="center"
                 android:textSize="20dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+                android:textColor="@color/black"/>
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
