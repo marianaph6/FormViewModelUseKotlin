@@ -1,22 +1,23 @@
 package com.example.formviewmodelusekotlin
 
+
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
 
-    private var resume = "No hay datos disponibles"
+    internal var resume = MutableLiveData<String>()
 
-    fun getCurrentResume(): String{
-        return resume
+    init{
+        resume.value= "No hay datos disponibles"
     }
 
+
     fun getUpdatedResume(name: String, lastname: String, phone:String, dni:String,age:String){
-        resume="Nombre: $name" +"\n"+
-        "Apellidos: $lastname" +"\n"+
+        resume.value="Nombre: $name" +"\n"+
+                "Apellidos: $lastname" +"\n"+
                 "Telefono: $phone "+"\n"+
                 "Cedula: $dni "+"\n"+
                 "Edad: $age"
-
-
     }
 }
