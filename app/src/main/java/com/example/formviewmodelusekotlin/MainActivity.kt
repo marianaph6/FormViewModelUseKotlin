@@ -1,11 +1,11 @@
 package com.example.formviewmodelusekotlin
 
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-
+import com.example.formviewmodelusekotlin.commons.FormUser
 import com.example.formviewmodelusekotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,8 +22,9 @@ class MainActivity : AppCompatActivity() {
             with(binding){
                 txtResume.text= resume
                 btnSubmit.setOnClickListener{
-                    viewModel.getUpdatedResume(edtName.text.toString(),edtLastName.text.toString(),
+                    val infoFormUser= FormUser(edtName.text.toString(),edtLastName.text.toString(),
                         edtPhone.text.toString(),edtDNI.text.toString(),edtAge.text.toString())
+                    viewModel.getUpdatedResume(infoFormUser)
                 }
 
             }

@@ -342,3 +342,5 @@ $RECYCLE.BIN/
 .gradle/7.3.3/fileHashes/fileHashes.lock
 .gradle/7.3.3/fileHashes/resourceHashesCache.bin
 .gradle/buildOutputCleanup/buildOutputCleanup.lock
+*.lock
+*.bin
