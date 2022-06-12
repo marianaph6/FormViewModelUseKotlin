@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import com.example.formviewmodelusekotlin.commons.FormUser
 import com.example.formviewmodelusekotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,9 +25,10 @@ class MainActivity : AppCompatActivity() {
             txtResume.text= viewModel.getCurrentResume()
             btnSubmit.setOnClickListener{
                 val actualValue= txtResume.text
-
-                viewModel.getUpdatedResume(edtName.text.toString(),edtLastName.text.toString(),
+                val infoUser: FormUser = FormUser(edtName.text.toString(),edtLastName.text.toString(),
                     edtPhone.text.toString(),edtDNI.text.toString(),edtAge.text.toString())
+
+                viewModel.getUpdatedResume(infoUser)
                 txtResume.text= viewModel.getCurrentResume()
             }
 

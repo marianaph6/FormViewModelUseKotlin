@@ -1,6 +1,7 @@
 package com.example.formviewmodelusekotlin
 
 import androidx.lifecycle.ViewModel
+import com.example.formviewmodelusekotlin.commons.FormUser
 
 class MainActivityViewModel : ViewModel() {
 
@@ -10,13 +11,11 @@ class MainActivityViewModel : ViewModel() {
         return resume
     }
 
-    fun getUpdatedResume(name: String, lastname: String, phone:String, dni:String,age:String){
-        resume="Nombre: $name" +"\n"+
-        "Apellidos: $lastname" +"\n"+
-                "Telefono: $phone "+"\n"+
-                "Cedula: $dni "+"\n"+
-                "Edad: $age"
-
-
+    fun getUpdatedResume(infoFormUser: FormUser){
+        resume= "Nombre:" +infoFormUser.name +"\n"+
+                "Apellidos:" +infoFormUser.lastname+"\n"+
+                "Telefono:" + infoFormUser.phone +"\n"+
+                "Cedula:" +infoFormUser.DNI +"\n"+
+                "Edad:" + infoFormUser.age
     }
 }
